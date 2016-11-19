@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:id="@+id/all_content_layout_content_main"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+
+
+    android:background="#FFFFFF"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main" tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/connected_to_device_layout_content_main"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/Show_data_info_layout_content_main"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+
+            >
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Session name"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:id="@+id/session_Name_show_data_layout_content_main"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Show_data_layout_content_main"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+
+            >
+
+
+            <LinearLayout
+                android:id="@+id/Show_data_layout_up_content_main"
+                android:layout_gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                >
+                <RelativeLayout
+                    android:id="@+id/Temperature_layout_content_main"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/background_lefttop_value"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/Temperature_layout_nested_content_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Temperature"
+                            android:textColor="@color/white"
+                            android:id="@+id/Temperature_text_show_data_layout_content_main"
+                            android:textSize="25dp" />
+
+                        <RelativeLayout
+                            android:id="@+id/Temperature_layout_nestedagain_content_main"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/Temperature_text_show_data_layout_content_main"
+                            android:layout_centerHorizontal="true">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:id="@+id/Temperature_number_show_data_layout_content_main"
+                                android:textSize="30dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" °C"
+                                android:textColor="@color/white"
+                                android:id="@+id/Temperature_unit_show_data_layout_content_main"
+                                android:layout_toEndOf="@id/Temperature_number_show_data_layout_content_main"
+                                android:textSize="20dp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/Humidity_layout_content_main"
+
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/background_righttop_value"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/Humidity_layout_nested_content_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Humidity"
+                            android:textColor="@color/white"
+                            android:id="@+id/Humidity_text_show_data_layout_content_main"
+                            android:textSize="25dp" />
+                        <RelativeLayout
+                            android:id="@+id/Humidity_layout_nestedagain_content_main"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/Humidity_text_show_data_layout_content_main"
+                            android:layout_centerHorizontal="true">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:id="@+id/Humidity_number_show_data_layout_content_main"
+                                android:textSize="30dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" %"
+                                android:textColor="@color/white"
+                                android:id="@+id/Humidity_unit_show_data_layout_content_main"
+                                android:layout_toEndOf="@id/Humidity_number_show_data_layout_content_main"
+                                android:textSize="20dp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Show_data_layout_down_content_main"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                >
+                <RelativeLayout
+                    android:id="@+id/Pressure_layout_content_main"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/background_bottom_value"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/Pressure_layout_nested_content_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pressure"
+                            android:textColor="@color/white"
+                            android:id="@+id/Pressure_text_show_data_layout_content_main"
+                            android:textSize="25dp"
+                            android:layout_centerHorizontal="true"/>
+
+                        <RelativeLayout
+                            android:id="@+id/Pressure_layout_nestedagain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/Pressure_text_show_data_layout_content_main"
+                            android:layout_centerHorizontal="true">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:id="@+id/Pressure_number_show_data_layout_content_main"
+
+                                android:textSize="25dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" mbar"
+                                android:textColor="@color/white"
+                                android:id="@+id/Pressure_unit_show_data_layout_content_main"
+
+                                android:layout_toEndOf="@id/Pressure_number_show_data_layout_content_main"
+                                android:textSize="20dp" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/Acceleration_layout_content_main"
+
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/background_bottom_value"
+                    android:layout_weight="1">
+                    <RelativeLayout
+                        android:id="@+id/Acceleration_layout_nested_content_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Acceleration"
+                            android:textColor="@color/white"
+                            android:id="@+id/Acceleration_text_show_data_layout_content_main"
+                            android:textSize="25dp" />
+
+                        <RelativeLayout
+                            android:id="@+id/Acceleration_layout_nestedagain1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/Acceleration_text_show_data_layout_content_main"
+                            android:layout_centerHorizontal="true">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="X:"
+                                android:textColor="@color/white"
+                                android:id="@+id/Acceleration_unit_show_data_layout_content_mainX"
+                                android:textSize="20dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:id="@+id/Acceleration_number_show_data_layout_content_mainX"
+                                android:layout_toEndOf="@id/Acceleration_unit_show_data_layout_content_mainX"
+                                android:textSize="20dp" />
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/Acceleration_layout_nestedagain2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/Acceleration_layout_nestedagain1"
+                            android:layout_centerHorizontal="true">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Y:"
+                                android:textColor="@color/white"
+                                android:id="@+id/Acceleration_unit_show_data_layout_content_mainY"
+                                android:textSize="20dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:id="@+id/Acceleration_number_show_data_layout_content_mainY"
+                                android:layout_toEndOf="@id/Acceleration_unit_show_data_layout_content_mainY"
+
+                                android:textSize="20dp" />
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/Acceleration_layout_nestedagain3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/Acceleration_layout_nestedagain2"
+                            android:layout_centerHorizontal="true">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Z:"
+                                android:textColor="@color/white"
+                                android:id="@+id/Acceleration_unit_show_data_layout_content_mainZ"
+
+                                android:textSize="20dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:id="@+id/Acceleration_number_show_data_layout_content_mainZ"
+                                android:layout_toEndOf="@id/Acceleration_unit_show_data_layout_content_mainZ"
+                                android:textSize="20dp" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/STOP_button_content_main"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Stop"
+            android:textSize="26sp"
+
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="3"
+            android:background="@drawable/button_stop_content_main"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/no_connection_layout_content_main"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NO DEVICE CONNECTED"
+            android:textSize="25dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/launch_baloon_layout_content_main"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LAUNCH BALOON MODE"
+            android:textSize="25dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+</LinearLayout>

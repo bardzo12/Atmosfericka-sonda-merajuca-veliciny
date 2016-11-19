@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scan_BLE_devices"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/Connect_Bar_scan_BLE_devices"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Discovering Bluetooth LE devices..."
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:id="@+id/textView2"
+            android:textColor="@color/white"
+            android:gravity="center" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/scanningDevices_scan_BLE_devices"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <ProgressBar
+            android:id="@+id/loadingPanel_scan_BLE_devices"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:indeterminate="true"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:layout_centerHorizontal="true"
+
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="CANCEL"
+            android:id="@+id/buttonCancel_scan_BLE_devices"
+            android:visibility="visible"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@id/loadingPanel_scan_BLE_devices"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/button_click"/>
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/choosingDevice_scan_BLE_devices"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ListView android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:drawSelectorOnTop="false"
+            />
+
+
+
+
+
+    </RelativeLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="OK"
+        android:textStyle="bold"
+        android:id="@+id/buttonOK1_scan_BLE_devices"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_click"/>
+
+    <RelativeLayout
+        android:id="@+id/setNameofSession_scan_BLE_devices"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:id="@+id/SessionNameText_scan_BLE_devices"
+            android:textColorHighlight="@color/colorPrimary"
+            android:background="@drawable/edit_text_design"
+            />
+
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="launch baloon mode"
+            android:textColor="@color/black"
+            android:layout_below="@id/SessionNameText_scan_BLE_devices"
+            android:id="@+id/checkBox_scan_BLE_devices" />
+
+
+
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="OK"
+        android:id="@+id/buttonOK2_scan_BLE_devices"
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_below="@id/setNameofSession_scan_BLE_devices"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_click"/>
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#170465</color>
+    <color name="colorPrimarySecond">#2C0F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorSelector">#87a9ff</color>
+    <color name="transparent">#ffffffff</color>
+    <color name="button_color">#170465</color>
+    <color name="button_clicked">#110543</color>
+    <color name="button_stop_color">#6E0606</color>
+    <color name="button_stop_clicked">#460505</color>
+    <color name="button_continue_color">#0FC11E</color>
+    <color name="button_continue_clicked">#179720</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>
