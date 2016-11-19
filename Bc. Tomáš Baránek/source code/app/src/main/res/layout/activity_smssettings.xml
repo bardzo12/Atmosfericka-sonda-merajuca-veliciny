@@ -1,0 +1,89 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayoutSMS"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:configChanges="orientation"
+    android:screenOrientation="portrait"
+    tools:context=".Activities.MainActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Add phone number"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/editTextPhone" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Choose added information"
+        android:id="@+id/textView3"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/buttonAdd"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Altitude"
+        android:id="@+id/checkBoxAltitude"
+        android:checked="false"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Battery Status"
+        android:id="@+id/checkBoxBatteryStatus"
+        android:checked="false"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/checkBoxAltitude" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data network"
+        android:id="@+id/checkBoxDataNetwork"
+        android:checked="false"
+        android:layout_below="@+id/checkBoxBatteryStatus"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        android:id="@+id/button5"
+        android:onClick="Confirm"
+        android:layout_below="@+id/checkBoxDataNetwork"
+        android:layout_toEndOf="@+id/checkBoxDataNetwork"
+        android:textColor="#fff"
+        android:background="@drawable/button_background"
+        android:layout_marginTop="54dp"
+        android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
